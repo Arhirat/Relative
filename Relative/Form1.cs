@@ -13,7 +13,7 @@ namespace Relative
 	{
 		enum Insert {None, Point, Line, LineLight, Invariant};
 
-		Mouse mMouse;
+		Mouse mMouse = new Mouse();
 		TimeSpace mTimeSpace;
 		Insert mInsert;
 		Object mSelectedObject;
@@ -28,7 +28,6 @@ namespace Relative
 			mInsert = Insert.None;
 			mTimeSpace = new TimeSpace();
 
-			mMouse = new Mouse();
 			initMouseShift();
 			mMouse.mOnWheelMove = onWheelMove;
 			mMouse.mLeft = new ButtonStateVar(MouseButtons.Left, null);
